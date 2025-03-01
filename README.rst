@@ -19,6 +19,16 @@ PGPy: Pretty Good Privacy for Python
 
 `PGPy` is a Python library for implementing Pretty Good Privacy into Python programs, conforming to the OpenPGP specification per RFC 4880.
 
+Disclaimer
+----------
+
+`PGPy13` is a (hopefully) temporary fork of the `main PGPy project <https://github.com/SecurityInnovation/PGPy>` with
+one and only one patch installed: the removal of a reference to the `imghdr` library, which was removed from the
+Python3 standard library in 3.13. (Support for python <3.9 is also removed, but this is purely a package metadata
+change.) When and if `issue #462 <https://github.com/SecurityInnovation/PGPy/issues/462>` is
+resolved and a new release of the upstream project happens, this fork will be taken down. I am not proposing to become
+PGPy's new maintainer, and will not be accepting pull requests or bug reports at this time.
+
 Features
 --------
 
@@ -29,11 +39,11 @@ It can create and verify RSA, DSA, and ECDSA signatures, at the moment. It can a
 Installation
 ------------
 
-To install PGPy, simply:
+To install PGPy13, simply:
 
 .. code-block:: bash
 
-    $ pip install PGPy
+    $ pip install PGPy13
 
 Documentation
 -------------
@@ -50,9 +60,9 @@ You can also join ``#pgpy`` on Freenode to ask questions or get involved
 Requirements
 ------------
 
-- Python >= 3.6
+- Python >= 3.9
 
-  Tested with: 3.10, 3.9, 3.8, 3.7, 3.6
+  Tested with: 3.13, 3.12, 3.11, 3.10, 3.9
 
 - `Cryptography <https://pypi.python.org/pypi/cryptography>`_
 
